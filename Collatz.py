@@ -72,4 +72,4 @@ def collatz_solve(r, w):
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
 
-print(compute_cycle_length(200))
+#print(compute_cycle_length(200))
