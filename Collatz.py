@@ -33,21 +33,24 @@ def collatz_eval(i, j):
     """
     # <your code>
     #assert n > 0
-    c = 1
+    cycle = 1
+    maxCycle = 1
     for n in range (i,j+1):
-        while n > 1 :
-            if (n % 2) == 0 :
-                n = (n // 2)
-            else :
-                n = (3 * n) + 1
-            c += 1
-    assert c > 0
-    return c
+        cycle = compute_cycle_length(n)
+        if cycle > maxCycle:
+            maxCycle = cycle
+    return maxCycle
 
-# -------------
-# collatz_print
-# -------------
 
+def compute_cycle_length(n): #Helper function 
+    cycle = 1
+    while n > 1 :
+        if (n % 2) == 0 :
+            n = (n // 2)
+        else :
+            n = (3 * n) + 1
+        cycle += 1
+    return cycle
 
 def collatz_print(w, i, j, v):
     """
@@ -59,11 +62,6 @@ def collatz_print(w, i, j, v):
     """
     w.write(str(i) + " " + str(j) + " " + str(v) + "\n")
 
-# -------------
-# collatz_solve
-# -------------
-
-
 def collatz_solve(r, w):
     """
     r a reader
@@ -73,3 +71,5 @@ def collatz_solve(r, w):
         i, j = collatz_read(s)
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
+print(compute_cycle_length(200))
