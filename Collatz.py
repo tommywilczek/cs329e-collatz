@@ -10,6 +10,16 @@
 # collatz_read
 # ------------
 
+#ef collatz_lazy_cache():
+#   lazy_dict = 
+
+
+def populate_lazy_cache():
+    lazy_dict = {}
+    for i in range (1, 1000001, 1000):
+        #print (i)
+        lazy_dict[i] = collatz_eval(i, i+1000)
+    print (lazy_dict)
 
 def collatz_read(s):
     """
@@ -70,5 +80,8 @@ def collatz_solve(r, w):
         i, j = collatz_read(s)
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
+
+populate_lazy_cache()
 
 #print(compute_cycle_length(200))
