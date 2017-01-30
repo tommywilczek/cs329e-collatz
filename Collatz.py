@@ -33,7 +33,6 @@ def collatz_eval(i, j):
     """
     # <your code>
     #assert n > 0
-    cycle = 1
     maxCycle = 1
     for n in range (i,j+1):
         cycle = compute_cycle_length(n)
