@@ -1,0 +1,97 @@
+commit 94a90c8a5cea40d443b8ee8866e42285ab273eab
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Thu Feb 2 03:36:57 2017 -0600
+
+    Completed Collatz.html
+
+commit 0d38868e9f0b608413c688f823ff3f0842265579
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Thu Feb 2 02:19:40 2017 -0600
+
+    Complete coverage and SPOJ acceptance
+
+commit bcae865bbd9c309767f1d8fa0fe0f69dcad6efb2
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Thu Feb 2 01:50:49 2017 -0600
+
+    Sphere accepted! Rejoice!
+
+commit 41d824816bb4e19ae2785d577a07d39882b39237
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Wed Feb 1 23:53:12 2017 -0600
+
+    Created a very efficient metacache!
+
+commit b2cd60bf9337b74bd0060364cf3405055fd30b78
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Wed Feb 1 22:03:32 2017 -0600
+
+    Created acceptance tests
+
+commit 8bfa5e7599772c426427753f29aad7307e053985
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Mon Jan 30 15:57:30 2017 -0600
+
+    Created a way to populate lazy cache
+
+commit 144f8d46fa5308f2feb001bb3490afcd11a5418a
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Sun Jan 29 20:10:43 2017 -0600
+
+    Got coverage to work by fixing tests
+
+commit 81f730571295cfec10d0c74129d9519066ba4770
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Sun Jan 29 19:28:47 2017 -0600
+
+    Trying to merge to master AGAIN
+
+commit 30eae303aac6f7b4fc38862dfa2ba477727e5aa3
+Merge: b27bdba b9fe257
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Sun Jan 29 19:27:03 2017 -0600
+
+    Merge branch 'master' into dev_branch
+
+commit b9fe25713e2dabd07edd59c2df406226515ec16a
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Sun Jan 29 19:24:17 2017 -0600
+
+    Another commit. 7:25pm on Sunday, 1/29
+
+commit f382cdb60bb5e5eeddb2ca61550767896af8abf0
+Author: Thomas Wilczek <tsw674@cs.utexas.edu>
+Date:   Sun Jan 29 18:38:24 2017 -0600
+
+    Fixed Tests
+
+commit b27bdbac378e1656b0462c450a32003b246ad40a
+Merge: bac436c afafc37
+Author: Tommy Wilczek <tommywilczek@wireless-10-147-147-232.public.utexas.edu>
+Date:   Sun Jan 29 17:40:02 2017 -0600
+
+    Merge branch 'master' into dev_branch
+
+commit afafc376a7b7739e8437b161c30b3c02cc8c243e
+Author: Tommy Wilczek <tommywilczek@wireless-10-147-147-232.public.utexas.edu>
+Date:   Sun Jan 29 17:37:14 2017 -0600
+
+    Initial Commit
+
+commit bac436ce130b5dc9862bc0114c49228ae13d64f6
+Author: tommywilczek <tommywilczek@utexas.edu>
+Date:   Sun Jan 29 17:34:08 2017 -0600
+
+    Update README.md
+
+commit 9d50f06ef91cd15be4ace2e9d35f7d2d3c00b6cb
+Author: Tommy Wilczek <tommywilczek@wireless-10-145-40-167.public.utexas.edu>
+Date:   Mon Jan 23 23:14:58 2017 -0600
+
+    first commit
+
+commit a82267a1cc87d74dc2aa1d92abfc0a0b2a4baabb
+Author: Tommy Wilczek <tommywilczek@wireless-10-145-40-167.public.utexas.edu>
+Date:   Mon Jan 23 23:14:14 2017 -0600
+
+    first commit
