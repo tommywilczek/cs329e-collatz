@@ -15,7 +15,7 @@
 from io import StringIO
 from unittest import main, TestCase
 
-from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, compute_cycle_length
+from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, compute_cycle_length, interval_eval
 
 # -----------
 # TestCollatz
@@ -32,25 +32,39 @@ class TestCollatz (TestCase):
         i, j = collatz_read(s)
         self.assertEqual(i,  1)
         self.assertEqual(j, 10)
-
     # ----
-    # eval
+    # eval 
     # ----
 
     def test_eval_1(self):
-        v = collatz_eval(1, 10)
-        self.assertEqual(v, 20)
+        v = collatz_eval(351737, 610734)
+        self.assertEqual(v, 470)
 
     def test_eval_2(self):
-        v = collatz_eval(100, 200)
-        self.assertEqual(v, 125)
+        v = collatz_eval(97024, 731998 )
+        self.assertEqual(v, 509)
 
     def test_eval_3(self):
-        v = collatz_eval(201, 210)
+        v = collatz_eval(348675, 243754 )
+        self.assertEqual(v, 441)
+    # ----
+    # eval Helper
+    # ----
+
+    def test_interval_eval_1(self):
+        v = interval_eval(1, 10)
+        self.assertEqual(v, 20)
+
+    def test_interval_eval_2(self):
+        v = interval_eval(100, 200)
+        self.assertEqual(v, 125)
+
+    def test_interval_eval_3(self):
+        v = interval_eval(201, 210)
         self.assertEqual(v, 89)
 
-    def test_eval_4(self):
-        v = collatz_eval(900, 1000)
+    def test_interval_eval_4(self):
+        v = interval_eval(900, 1000)
         self.assertEqual(v, 174)
     # -----
     # Compute Cycle Length

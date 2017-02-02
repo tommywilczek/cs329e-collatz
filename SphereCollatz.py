@@ -1,5 +1,51 @@
 #!/usr/bin/env python3
 
+# ------------------------------
+# projects/collatz/RunCollatz.py
+# Copyright (C) 2016
+# Glenn P. Downing
+# ------------------------------
+
+# -------
+# imports
+# -------
+
+import sys
+
+
+
+# ----
+# main
+# ----
+
+
+
+""" #pragma: no cover
+% cat RunCollatz.in
+1 10
+100 200
+201 210
+900 1000
+
+
+
+% RunCollatz.py < RunCollatz.in > RunCollatz.out
+
+
+
+% cat RunCollatz.out
+1 10 1
+100 200 1
+201 210 1
+900 1000 1
+
+
+
+% pydoc3 -w Collatz
+# That creates the file Collatz.html
+"""
+#!/usr/bin/env python3
+
 # ---------------------------
 # projects/collatz/Collatz.py
 # Copyright (C) 2016
@@ -52,34 +98,34 @@ def collatz_eval(i, j):
     beginning = True
     going = True
     while (going==True):
-	    if (beginning):
-	    	if (j<=current*1000):
-	    		return interval_eval(i,j)
-	    	temp = interval_eval(i ,current * 1000)
-	    	if (temp > maxCycle):
-	    		maxCycle = temp
-	    	#print ("Current is now:", current)
-	    	#print ("Computed from i to a, maxCycle is", maxCycle)
-	    	#print ("Current is", current)
-	    	beginning = False
-	    if (j > current*1000+1000):
-	    	if (interval_cache[current] > maxCycle):
-	    		maxCycle = interval_cache[current]
-	    		#print ("Pulled from cache, maxCycle changed to", maxCycle)
-	    	current += 1
-	    	#print ("Current is now:", current)
-	    	#print ("Computed from current to current+1, maxCycle is", maxCycle)
-	    	#print ("Current is", current)
-	    if (j <= current * 1000 + 1000):
-	    	#print ("AT END")
-	    	end_interval_maxCycle = interval_eval(current*1000,j)
-	    	#print ("Computed end")
-	    	if (end_interval_maxCycle > maxCycle):
-	    		maxCycle = end_interval_maxCycle
-	    		#print ("end interval greater, new max is", maxCycle)
-	    	current = j
-	    	#print ("FINISHED! maxCycle is:", maxCycle)
-	    	return maxCycle
+        if (beginning):
+            if (j<=current*1000):
+                return interval_eval(i,j)
+            temp = interval_eval(i ,current * 1000)
+            if (temp > maxCycle):
+                maxCycle = temp
+            #print ("Current is now:", current)
+            #print ("Computed from i to a, maxCycle is", maxCycle)
+            #print ("Current is", current)
+            beginning = False
+        if (j > current*1000+1000):
+            if (interval_cache[current] > maxCycle):
+                maxCycle = interval_cache[current]
+                #print ("Pulled from cache, maxCycle changed to", maxCycle)
+            current += 1
+            #print ("Current is now:", current)
+            #print ("Computed from current to current+1, maxCycle is", maxCycle)
+            #print ("Current is", current)
+        if (j <= current * 1000 + 1000):
+            #print ("AT END")
+            end_interval_maxCycle = interval_eval(current*1000,j)
+            #print ("Computed end")
+            if (end_interval_maxCycle > maxCycle):
+                maxCycle = end_interval_maxCycle
+                #print ("end interval greater, new max is", maxCycle)
+            current = j
+            #print ("FINISHED! maxCycle is:", maxCycle)
+            return maxCycle
 
 
 def interval_eval(i,j):
@@ -117,11 +163,11 @@ def collatz_solve(r, w):
     w a writer
     """
     for s in r:
-    	if not s.strip():
-    		continue
-    	i, j = collatz_read(s)
-    	v = collatz_eval(i, j)
-    	collatz_print(w, i, j, v)
+        if not s.strip():
+            continue
+        i, j = collatz_read(s)
+        v = collatz_eval(i, j)
+        collatz_print(w, i, j, v)
 
 
 
@@ -136,3 +182,6 @@ for line in output_file:
 #print (collatz_eval(348675, 243754))
 
 #print (interval_eval(348675, 243754))
+
+if __name__ == "__main__":
+    collatz_solve(sys.stdin, sys.stdout)
